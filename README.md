@@ -1,4 +1,4 @@
-<h1 align="center" id="title">kiddo_health_buddy</h1>
+<h1 align="center" id="title">Mommy_Med_Mate</h1>
 
 <p align="center"><img src="https://github.com/mernaatef28/app_project1/blob/main/Screenshot%202024-03-05%20151243.png?raw=true" alt="project-image"></p>
 
