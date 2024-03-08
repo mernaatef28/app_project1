@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Mommy_Med_Mate</h1>
 
-<p align="center"><img src="https://github.com/mernaatef28/app_project1/blob/main/Screenshot%202024-03-05%20151243.png?raw=true" alt="project-image"></p>
+<p align="center"><img src="https://github.com/mernaatef28/app_project1/blob/main/Screenshot 2024-03-08 235452.png?raw=true" alt="project-image"></p>
 
 <p id="description">expert system mobile app to help the fresh mommy's to talk care of the health of their new born .</p>
 
