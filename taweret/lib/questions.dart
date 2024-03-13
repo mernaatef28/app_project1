@@ -9,7 +9,7 @@ import 'package:taweret/constants.dart';
 // ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:taweret/result.dart';
 import 'package:taweret/componants/medical-api.dart';
 import 'dart:convert' as convert;
 
@@ -99,22 +99,23 @@ Map<String, bool?> combineListsIntoMap(List<String> keys, List<bool?> values) {
         });
       }
 // {index : answer}
-  void showanswer(){
-    setState(()async {
+  void showanswer ()async{
+    // setState(()async {
       if (currentQuestionIndex == questions.length - 1) {
          answers = combineListsIntoMap(questions, answervalues);
         print('User Answers: $answers');
         // Call the api function and handle the result
-        var result = await api(convert.jsonEncode(answers));
-          print('API Response: $result');
-          Navigator.push(context, MaterialPageRoute(builder: (context) => result(result)));
+        var resultresponse = await api(convert.jsonEncode(answers));
+          print('API Response: $resultresponse');
+          // ignore: use_build_context_synchronously
+          Navigator.push(context, MaterialPageRoute(builder: (context) => result(resultresponse)));
       
           // You can handle the API response here
         
          }
          else{
           print("==== no answer is here " );
-         }});
+         }
 
       }
 //////////////////////////////////////

@@ -12,8 +12,6 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
-import 'package:taweret/onbording_screen.dart';
-import 'package:taweret/result.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});

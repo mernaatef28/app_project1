@@ -12,7 +12,6 @@ import 'package:flutter/rendering.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:taweret/result.dart';
 import 'firebase_options.dart';
 import 'package:taweret/Login.dart';
 

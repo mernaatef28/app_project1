@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taweret/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:taweret/getStart.dart';
 import 'package:taweret/onbording_screen.dart';
 
 class MyLoginPage extends StatefulWidget {
