@@ -14,7 +14,7 @@ api(data) async {
   var url = Uri.https('medical-es-api.vercel.app', '/api');
   var response = await http.post(url, headers: headers, body: data);
   var jsonResponse = convert.jsonDecode(response.body) as Map<String, dynamic>;
-  if (jsonResponse[0]['name']==)
+  //if (jsonResponse[0]['name']==)
   return jsonResponse;
 }
 

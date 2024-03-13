@@ -1,15 +1,18 @@
 
+// ignore_for_file: use_super_parameters
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:taweret/componants/showdata.dart';
 
 class result extends StatefulWidget {
-  final Map<String, String?> apiresult;
-  result({Key? key, required this.apiresult}) : super(key: key);
-  List<String> keys = [];
-  List<String> values = [];
+  // final Map<String, String?> apiresult;
+   const result({Key? key}) : super(key: key);
+  // List<String> keys = [];
+  // List<String> values = [];
   final String name = 'dignosis' ;
-
+  
  
 // @override
 //   void initState() {
@@ -21,19 +24,20 @@ class result extends StatefulWidget {
 }
 
 class _resultState extends State<result> {
-  // List data = [];
-  // getData()async{
-  //   QuerySnapshot querySnapshot =await FirebaseFirestore.instance.collection("diseases").get() ;
-  //   data.addAll(querySnapshot.docs) ;
-  //   setState(() {});
-  // }
-  // @override
-  // void initState()
-  // {
-  //   // getData();
-  //   // super.initState();
+  List<QueryDocumentSnapshot> data = [];
+  bool isLoading = true;
+  getData()async{
+    QuerySnapshot querySnapshot =await FirebaseFirestore.instance.collection("diseases").get() ;
+    data.addAll(querySnapshot.docs) ;
+    setState(() { isLoading = false;});
+  }
+  @override
+  void initState()
+  {
+     getData();
+     super.initState();
     
-  // }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,12 +62,13 @@ class _resultState extends State<result> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // showdata( field:  "${data[1]['diseasename']}", data: 'diseasename' ),
-              // showdata( field:  "${data[1]['discribtion']}", data: 'discribtion' ),
-              // showdata( field:  "${data[1]['treatment']}", data: 'treatment' ),
-               for (var entry in apiresult)
-                  showdata(field: entry.key.toString(), data: entry.value.toString()),
-            ],
+                showdata( field:  "${data[0]['diseasename']}", data: 'diseasename' ),
+            //   // showdata( field:  "${data[1]['discribtion']}", data: 'discribtion' ),
+                showdata( field:  "${data[0]['treatment']}", data: 'treatment' ),
+            // //    for (var entry in apiresult)
+            //       showdata(field: entry.key.toString(), data: entry.value.toString()),
+
+             ],
           ),
         ),
       ]),
