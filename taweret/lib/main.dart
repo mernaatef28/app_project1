@@ -65,8 +65,8 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      // home: FirebaseAuth.instance.currentUser == null ?MyLoginPage() : MyHomePage(),
-      home: result(),
+      home: FirebaseAuth.instance.currentUser == null ?MyLoginPage() : MyHomePage(),
+      
 
     );
   }
